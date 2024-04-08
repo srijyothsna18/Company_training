@@ -1,10 +1,11 @@
 from pywinauto.application import Application
 import pytest
 from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.common.by import By
 options = Options()
-options.add_experimental_option("detach",True)
+#options.add_experimental_option("detach",True)
+options.add_argument("--headless")
 import logging
 
 
@@ -59,7 +60,7 @@ obj = Locators()
 class automate_web:
 
     def __init__(self,url):
-        self.driver = webdriver.Chrome(options=options)
+        self.driver = webdriver.Firefox(options=options)
         self.driver.get(url)
         self.driver.maximize_window()
         self.logger = logging.getLogger('my_logger')
