@@ -65,7 +65,7 @@ class automate_web:
         self.driver.maximize_window()
         self.logger = logging.getLogger('my_logger')
         self.logger.setLevel(logging.DEBUG)
-        self.file_handler = logging.FileHandler(r"C:\Users\vlab\Desktop\Frame_works\Logs\web_logfile.log", mode="w")
+        self.file_handler = logging.FileHandler("/var/lib/jenkins/workspace/job_sri/Frame_works/Logs/web_logfile.log", mode="w")
         self.file_handler.setLevel(logging.DEBUG)
         self.formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
         self.file_handler.setFormatter(self.formatter)
