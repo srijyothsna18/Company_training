@@ -4,7 +4,7 @@ from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.common.by import By
 options = Options()
-#options.add_experimental_option("detach",True)
+options.add_experimental_option("detach",True)
 options.add_argument("--headless")
 import logging
 
